@@ -9,8 +9,8 @@
 
 body {
     font-size: 100%;
-    background: linear-gradient(248.46deg, #003CD7 0%, rgba(0, 157, 207, 0.74) 100%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(248.46deg, #ffd8b1 0%, rgba(255, 231, 204, 0.74)4) 100%;
+    
 }
 .cabecalho{
     display: flex;
@@ -19,28 +19,25 @@ body {
     justify-content: space-around;
     padding: 24px;
 }
-.logo{
-    height: 72px;
-    border-radius: 7px;
-}
+
 .cabecalho-menu{
     display: flex;
     gap: 10px;
-    color: azure;
+    color: rgb(0, 0, 0);
 }
 .cabecalho-menu-item{
     font-family: 'Heebo', sans-serif;
     font-weight: 400;
-    size: 18px;
-    color: azure;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
 }
 .cabecalho-menu-item:hover{
-    background-color: rgba(240, 255, 255, 0.5);
+    background-color: rgba(74, 98, 252, 0.5);
     border-radius: 15px;
     transition: background-color 0.25s;
 }
 .conteudo{
-    border-top: 0.4px solid azure;
+    border-top: 0.4px solid rgb(0, 0, 0);
     margin-left: 240px;
     margin-right: 240px;
 }
@@ -55,47 +52,34 @@ body {
 .conteudo-principal-escrito{
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 22px;
 }
 .conteudo-principal-escrito-titulo{
     font-family: 'Heebo', sans-serif;
     font-weight: 400;
     font-size: 64px;
-    color:azure;
+    color:rgb(0, 0, 0);
     display: flex;
 }
 .conteudo-principal-escrito-frase-impacto{
     font-family: 'Heebo', sans-serif;
     font-weight: 300;
-    font-size: 19px;
-    color:azure;
+    font-size: 18px;
+    color:rgb(0, 0, 0);
     display: flex;
 }
-.conteudo-principal-escrito-botao{
-    font-family: 'Heebo', sans-serif;
-    font-weight: 500;
-    font-size: 12px;
-    width: 120px;
-    height: 60;
-    border-radius: 20px;
-    background-color: azure;
-    border: none;
-    box-shadow: 2px 2px 3px #4189e2;
-}
-.conteudo-principal-escrito-botao:hover{
-    background-color: rgba(240, 255, 255, 0.5);
-    transition:background-color 0.25s;
-}
+
 .conteudo-principal-escrito-imagem{
-    width: 600px;
-    height: 358px;
+    width: 320px;
+    height: 320px;
     border-radius: 7px;
+    display: flex;
 }
 .conteudo-secundario{
     display: flex;
     flex-direction: column;
     align-items:flex-start;
-    border-top: 0.4px solid azure;
+    border-top: 0.4px solid rgb(0, 0, 0);
     padding-top: 10px;
     margin-top: 15px;
     margin-left: 440px;
@@ -104,16 +88,21 @@ body {
     gap: 7px;
     font-family: 'Heebo', sans-serif;
     font-weight: 400;
-    color: azure;
+    color: rgb(0, 0, 0);
 }
 .desfecho{
     padding: 32px;
-    border-top: 0.4px solid azure;
+    border-top: 0.4px solid rgb(0, 0, 0);
     margin-left: 240px;
     margin-right: 240px;
+    display: flex;
 }
-.imagem_final{
-    height: 42px;
-    display: block;
-    margin: auto;
+
+.desfecho-texto{
+    display: flex;
+    font-family:'Heebo';
+    font-size: 15px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin:auto;
 }
