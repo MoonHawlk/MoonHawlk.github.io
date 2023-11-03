@@ -9,8 +9,7 @@
 
 body {
     font-size: 100%;
-    background: linear-gradient(248.46deg, #ffd8b1 0%, rgba(255, 231, 204, 0.74)4) 100%;
-    
+    background-color: #faf2e9;
 }
 .cabecalho{
     display: flex;
@@ -19,7 +18,6 @@ body {
     justify-content: space-around;
     padding: 24px;
 }
-
 .cabecalho-menu{
     display: flex;
     gap: 10px;
@@ -32,9 +30,9 @@ body {
     color: rgb(0, 0, 0);
 }
 .cabecalho-menu-item:hover{
-    background-color: rgba(74, 98, 252, 0.5);
-    border-radius: 15px;
-    transition: background-color 0.25s;
+    background-color: rgb(255, 242, 0);
+    border-radius: 5px;
+    transition: background-color 0.45s;
 }
 .conteudo{
     border-top: 0.4px solid rgb(0, 0, 0);
@@ -44,51 +42,58 @@ body {
 .conteudo-principal{
     margin-top: 15px;
     font-family: 'Heebo', sans-serif;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: center; 
+}
+.resumo{
+    margin-top: 5px;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 1400;
+    font-size: 40px;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: center; 
 }
-.conteudo-principal-escrito{
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-}
-.conteudo-principal-escrito-titulo{
-    font-family: 'Heebo', sans-serif;
-    font-weight: 400;
-    font-size: 64px;
-    color:rgb(0, 0, 0);
-    display: flex;
-}
-.conteudo-principal-escrito-frase-impacto{
-    font-family: 'Heebo', sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-    color:rgb(0, 0, 0);
-    display: flex;
-}
-
-.conteudo-principal-escrito-imagem{
-    width: 320px;
-    height: 320px;
-    border-radius: 7px;
-    display: flex;
-}
-.conteudo-secundario{
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    border-top: 0.4px solid rgb(0, 0, 0);
-    padding-top: 10px;
+.experiencia{
     margin-top: 15px;
-    margin-left: 440px;
-    margin-right: 440px;
-    margin-bottom: 15px;
-    gap: 7px;
     font-family: 'Heebo', sans-serif;
-    font-weight: 400;
-    color: rgb(0, 0, 0);
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    margin-bottom: 20px;
+}
+.titulo-trabalhos{
+    margin-top: 15px;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 1400;
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+}
+.titulo-projetos{
+    margin-top: 15px;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 1400;
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+}
+.projetos{
+    margin-top: 15px;
+    font-family: 'Heebo', sans-serif;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    margin-bottom: 20px;
+}
+.projetos-ativos{
+    
 }
 .desfecho{
     padding: 32px;
