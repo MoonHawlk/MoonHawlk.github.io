@@ -1,0 +1,105 @@
+:root {
+    --background-color: #1e1e1e; /* Fundo escuro semelhante ao terminal */
+    --text-color: #d4d4d4; /* Texto claro para contraste */
+    --link-color: #569cd6; /* Azul para links */
+    --link-hover-color: #9cdcfe; /* Azul mais claro para hover */
+    --line-color: #2d2d2d; /* Linha sutil mais escura */
+    --highlight-color: #ffc107; /* Amarelo para destaques */
+    --content-width: 700px; /* Largura máxima do conteúdo */
+}
+
+body {
+    margin: 0;
+    font-family: "Courier New", Courier, monospace; /* Fonte de terminal */
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--content-width); /* Alinha com a largura do conteúdo */
+    margin: 0 auto;
+    border-bottom: 1px solid var(--line-color);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--highlight-color); /* Amarelo para destaque */
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem; /* Reduzi o espaçamento entre os links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--link-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--link-hover-color);
+}
+
+main {
+    padding: 2rem 1rem; /* Reduzi o espaçamento lateral */
+    max-width: var(--content-width); /* Largura máxima do conteúdo */
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Estilização do conteúdo Markdown */
+main h1, main h2 {
+    color: var(--highlight-color); /* Amarelo para títulos */
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+main p {
+    color: var(--text-color); /* Texto padrão */
+    margin: 0.5rem 0; /* Reduzi os espaços entre os parágrafos */
+}
+
+main a {
+    color: var(--link-color); /* Azul para links */
+    text-decoration: none;
+}
+
+main a:hover {
+    color: var(--link-hover-color); /* Hover para links */
+}
+
+main em, main i {
+    color: var(--highlight-color); /* Amarelo para texto em itálico */
+    font-style: italic;
+}
+
+main strong, main b {
+    color: var(--highlight-color); /* Amarelo para texto em negrito */
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--line-color);
+    color: var(--text-color);
+    background-color: transparent;
+    max-width: var(--content-width); /* Alinha com a largura do conteúdo */
+    margin: 0 auto;
+}
+
+footer p {
+    margin: 0;
+}
