@@ -1,0 +1,230 @@
+{
+  "projects": [
+    {
+      "slug": "VerNess",
+      "name": "VerNess",
+      "description": "A model-agnostic, plugin-native AI execution harness where an LLM is only one kind of compute resource. Built on the DeepSeek Harness substrate, adding personas, skills, routing, evaluation, governance and a data plane.",
+      "repo": "https://github.com/MoonHawlk/VerNess",
+      "homepage": null,
+      "language": "JavaScript",
+      "tags": ["AI Agents", "Harness", "Plugins", "Evaluation"],
+      "updated": "2026-10-04",
+      "enabled": true
+    },
+    {
+      "slug": "tmr",
+      "name": "tmr",
+      "description": "Terminal Markdown Reader: a fast, low-footprint terminal UI for browsing, reading and editing Markdown notes.",
+      "repo": "https://github.com/MoonHawlk/tmr",
+      "homepage": null,
+      "image": "https://raw.githubusercontent.com/MoonHawlk/tmr/main/docs/tmr_readme_animation.svg",
+      "image_alt": "Animated preview of tmr browsing and reading Markdown notes in the terminal",
+      "language": "Rust",
+      "tags": ["TUI", "Markdown", "Productivity"],
+      "updated": "2026-08-31",
+      "enabled": true
+    },
+    {
+      "slug": "Signal",
+      "name": "Signal",
+      "description": "Real-time circular Chladni plate simulation driven by live microphone audio. The FFT spectrum is mapped to the vibration modes of a plate rendered with an OpenGL shader.",
+      "repo": "https://github.com/MoonHawlk/Signal",
+      "homepage": null,
+      "language": "Python",
+      "tags": ["OpenGL", "Audio", "Simulation", "Generative"],
+      "updated": "2026-02-22",
+      "enabled": true
+    },
+    {
+      "slug": "tcc",
+      "name": "TCC: LLMs for Data Retrieval",
+      "description": "Final project for my Computer Science bachelor's degree: a comparative study of LLMs retrieving data from static web pages with a RAG architecture, scored automatically with RAGAS.",
+      "repo": "https://github.com/MoonHawlk/tcc",
+      "homepage": null,
+      "language": "Jupyter Notebook",
+      "tags": ["RAG", "LLM", "Ollama", "RAGAS"],
+      "updated": "2026-02-19",
+      "enabled": true
+    },
+    {
+      "slug": "in-a-nut-shell",
+      "name": "in-a-nut-shell",
+      "description": "A short project to rebuild my Unix shell from years ago. Built in three days with minimal AI assistance, revisiting core shell concepts and system-level programming fundamentals.",
+      "repo": "https://github.com/MoonHawlk/in-a-nut-shell",
+      "homepage": null,
+      "language": "C",
+      "tags": ["Shell", "Systems", "Unix"],
+      "updated": "2025-12-29",
+      "enabled": true
+    },
+    {
+      "slug": "code_class_datascience",
+      "name": "Data Science Dashboard",
+      "description": "Example of a data science dashboard built for a class and deployed on Streamlit.",
+      "repo": "https://github.com/MoonHawlk/code_class_datascience",
+      "homepage": "https://moonhawlk-code-class-datascience-app-lzo3s8.streamlit.app/",
+      "language": "Python",
+      "tags": ["Streamlit", "Dashboard", "Data Science"],
+      "updated": "2026-01-17",
+      "enabled": true
+    },
+    {
+      "slug": "FinanLLM",
+      "name": "FinanLLM",
+      "description": "Proof of concept of a personal finance dashboard: interactive Streamlit and Plotly charts for income, expenses and monthly balance, with PDF reports. Explores how LLMs can be used on daily finances.",
+      "repo": "https://github.com/MoonHawlk/FinanLLM",
+      "homepage": null,
+      "language": "Python",
+      "tags": ["LLM", "GenAI", "Streamlit", "Plotly"],
+      "updated": "2025-03-07",
+      "enabled": true
+    },
+    {
+      "slug": "RAG_SQL_LLM",
+      "name": "RAG · SQL · LLM",
+      "description": "Conversational chat system that answers natural-language questions over MySQL data, built with LlamaIndex, so tabular data can be queried without writing SQL by hand.",
+      "repo": "https://github.com/MoonHawlk/RAG_SQL_LLM",
+      "homepage": null,
+      "language": "Jupyter Notebook",
+      "tags": ["RAG", "SQL", "LlamaIndex", "MySQL"],
+      "updated": "2025-06-06",
+      "enabled": true
+    },
+    {
+      "slug": "GoFetch",
+      "name": "GoFetch",
+      "description": "Command-line tool written in Go that shows system information in the terminal, similar to Neofetch: OS, kernel, uptime, memory, CPU and GPU.",
+      "repo": "https://github.com/MoonHawlk/GoFetch",
+      "homepage": null,
+      "language": "Go",
+      "tags": ["CLI", "Systems"],
+      "updated": "2024-06-30",
+      "enabled": true
+    },
+    {
+      "slug": "Random-Wallpaper",
+      "name": "Random Wallpaper Generator",
+      "description": "Python script that generates pattern-based wallpapers from seeded shapes, point counts and output sizes.",
+      "repo": "https://github.com/MoonHawlk/Random-Wallpaper",
+      "homepage": null,
+      "image": "https://raw.githubusercontent.com/MoonHawlk/Random-Wallpaper/main/My%20Favorite%20Patterns/crazy_wallpaper.png",
+      "image_alt": "Generated wallpaper made of seeded circles and squares on black",
+      "language": "Python",
+      "tags": ["Generative Art", "Python"],
+      "updated": "2025-06-07",
+      "enabled": true
+    },
+    {
+      "slug": "mini-projeto-2",
+      "name": "Mini Projeto 2: Text Summarisation",
+      "description": "Applied study of sequence-to-sequence models with Hugging Face Transformers for automatic text summarisation, evaluated with the ROUGE metric.",
+      "repo": "https://github.com/MoonHawlk/mini-projeto-2",
+      "homepage": null,
+      "language": "Jupyter Notebook",
+      "tags": ["NLP", "Transformers", "Seq2Seq"],
+      "updated": "2025-05-25",
+      "enabled": true
+    },
+    {
+      "slug": "Mouse_Click_Counter",
+      "name": "Mouse Click Counter",
+      "description": "Tracks how many times you click the mouse, recording the exact coordinates and time of each click.",
+      "repo": "https://github.com/MoonHawlk/Mouse_Click_Counter",
+      "homepage": null,
+      "language": "Python",
+      "tags": ["Python", "Utility"],
+      "updated": "2023-06-07",
+      "enabled": true
+    },
+    {
+      "slug": "Mini-Projeto-CNN",
+      "name": "Mini Project: Fruit Recognition",
+      "description": "Mini project for a Deep Learning class: CNN classification of fruit images, with regularisation, transfer learning and detailed result analysis.",
+      "repo": "https://github.com/MoonHawlk/Mini-Projeto-CNN",
+      "homepage": null,
+      "language": "Jupyter Notebook",
+      "tags": ["Deep Learning", "CNN", "Keras", "TensorFlow"],
+      "updated": "2025-04-13",
+      "enabled": true
+    },
+    {
+      "slug": "TerminalNetTools",
+      "name": "TerminalNetTools",
+      "description": "Collection of network tools to help diagnose connectivity problems in the terminal and point to possible fixes. Stable version for macOS.",
+      "repo": "https://github.com/MoonHawlk/TerminalNetTools",
+      "homepage": null,
+      "language": "Python",
+      "tags": ["Networking", "CLI", "macOS"],
+      "updated": "2024-01-18",
+      "enabled": true
+    },
+    {
+      "slug": "Grafenomenos",
+      "name": "Grafenômenos",
+      "description": "Python project. Installation instructions are in the repository; a fuller description is still to come.",
+      "repo": "https://github.com/MoonHawlk/Grafenomenos",
+      "homepage": null,
+      "image": "https://raw.githubusercontent.com/MoonHawlk/Grafenomenos/main/static/Grafenomenos.png",
+      "image_alt": "Grafenômenos logo",
+      "language": "Python",
+      "tags": ["Python"],
+      "updated": "2023-11-28",
+      "enabled": true
+    },
+    {
+      "slug": "Data-Care",
+      "name": "Data-Care",
+      "description": "Python project. Documentation is still in progress.",
+      "repo": "https://github.com/MoonHawlk/Data-Care",
+      "homepage": null,
+      "language": "Python",
+      "tags": ["Python", "Data"],
+      "updated": "2023-10-16",
+      "enabled": true
+    },
+    {
+      "slug": "Hand-Recognition",
+      "name": "Hand Recognition",
+      "description": "Fun Python script that recognises hand patterns and prints the action associated with each one.",
+      "repo": "https://github.com/MoonHawlk/Hand-Recognition",
+      "homepage": null,
+      "language": "Python",
+      "tags": ["Computer Vision", "Python"],
+      "updated": "2023-09-22",
+      "enabled": true
+    },
+    {
+      "slug": "CesarInvaders",
+      "name": "CesarInvaders",
+      "description": "2D game made with Godot for a university class. First experience with the engine.",
+      "repo": "https://github.com/MoonHawlk/CesarInvaders",
+      "homepage": null,
+      "language": "GDScript",
+      "tags": ["Godot", "Game"],
+      "updated": "2022-09-17",
+      "enabled": true
+    },
+    {
+      "slug": "AtividadeContinuadaPOO",
+      "name": "Object-Oriented Programming Assignment",
+      "description": "Code developed for the continued Object-Oriented Programming assignment at university.",
+      "repo": "https://github.com/MoonHawlk/AtividadeContinuadaPOO",
+      "homepage": null,
+      "language": "Java",
+      "tags": ["Java", "OOP"],
+      "updated": "2022-11-04",
+      "enabled": true
+    },
+    {
+      "slug": "SecureBrowser",
+      "name": "Secure Browser",
+      "description": "A simple, unfinished web browser that aims to browse without Google cookies, with back, forward, reload and browser info controls.",
+      "repo": "https://github.com/MoonHawlk/SecureBrowser",
+      "homepage": null,
+      "language": "Python",
+      "tags": ["Browser", "Privacy", "Python"],
+      "updated": "2023-02-22",
+      "enabled": true
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+/* ============================================================
+   PROJECT PAGES
+   Layout only. Colours, type, buttons, tags and cards come from
+   ../styles.css, so every token in DESIGN_SYSTEM.md still applies.
+   ============================================================ */
+
+.project-hero,
+.projects-index {
+    padding-top: 8rem;
+}
+
+.project-lead {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    max-width: 560px;
+    margin-bottom: 1.5rem;
+}
+
+.project-hero .project-tags {
+    margin-bottom: 2rem;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1.25rem 0;
+    margin-bottom: 2rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.project-meta dt {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 0.25rem;
+}
+
+.project-meta dd {
+    font-size: 0.93rem;
+    color: var(--text);
+}
+
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.project-figure {
+    margin-top: 3rem;
+    padding: 1.25rem;
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    background-color: var(--bg-alt);
+}
+
+.project-figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+    .project-hero,
+    .projects-index {
+        padding-top: 7rem;
+    }
+}
