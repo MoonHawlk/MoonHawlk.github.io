@@ -1,10 +1,10 @@
 {
   "projects": [
     {
-      "slug": "VerNess",
-      "name": "VerNess",
+      "slug": "FiNess",
+      "name": "FiNess",
       "description": "A model-agnostic, plugin-native AI execution harness where an LLM is only one kind of compute resource. Built on the DeepSeek Harness substrate, adding personas, skills, routing, evaluation, governance and a data plane.",
-      "repo": "https://github.com/MoonHawlk/VerNess",
+      "repo": "https://github.com/MoonHawlk/FiNess",
       "homepage": null,
       "language": "JavaScript",
       "tags": ["AI Agents", "Harness", "Plugins", "Evaluation"],

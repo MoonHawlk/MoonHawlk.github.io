@@ -49,7 +49,7 @@ def head(title, description, site):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {MARKER}
-    <title>{esc(title)} — Filipe Moreno</title>
+    <title>{esc(title)} · Filipe Moreno</title>
     <meta name="description" content="{esc(description)}">
     <link rel="icon" href="{site}favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,7 +87,7 @@ def project_page(p):
             f'<a href="{esc(p["homepage"])}" target="_blank" rel="noopener" class="btn btn-secondary">Live demo ↗</a>'
         )
 
-    meta = [("Language", p.get("language") or "—"), ("Last update", fmt_date(p["updated"]))]
+    meta = [("Language", p.get("language") or "Not specified"), ("Last update", fmt_date(p["updated"]))]
     meta_html = "".join(f"<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>" for k, v in meta)
 
     figure = ""
