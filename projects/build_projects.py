@@ -117,10 +117,78 @@ def project_page(p):
     )
 
 
+FILTER_JS = r"""
+    <script>
+    (function () {
+        const input = document.getElementById('project-search');
+        const grid = document.getElementById('projects-grid');
+        const cards = Array.from(grid.querySelectorAll('.project-card'));
+        const chips = Array.from(document.querySelectorAll('.tag-filter'));
+        const count = document.getElementById('project-count');
+        const empty = document.getElementById('project-empty');
+        const selected = new Set();
+
+        // Every character of `token` appears in `text`, in order (e.g. "lmm" matches "llm").
+        function isSubsequence(token, text) {
+            let i = 0;
+            for (const ch of text) {
+                if (ch === token[i]) i++;
+                if (i === token.length) return true;
+            }
+            return false;
+        }
+
+        // 2 = substring match, 1 = fuzzy match, 0 = no match.
+        function scoreToken(token, text) {
+            if (text.includes(token)) return 2;
+            return isSubsequence(token, text) ? 1 : 0;
+        }
+
+        function update() {
+            const tokens = input.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+            const matches = [];
+
+            cards.forEach(card => {
+                const tags = card.dataset.tags.toLowerCase().split('|');
+                const hasTags = [...selected].every(tag => tags.includes(tag));
+                let total = 0;
+                for (const token of tokens) {
+                    const s = scoreToken(token, card.dataset.search);
+                    if (s === 0) { total = -1; break; }
+                    total += s;
+                }
+                const visible = hasTags && total >= 0;
+                card.hidden = !visible;
+                if (visible) matches.push({ card, total });
+            });
+
+            // Best matches first; ties keep the default order (most recently updated).
+            matches.sort((a, b) => b.total - a.total);
+            matches.forEach(m => grid.appendChild(m.card));
+
+            count.textContent = matches.length + ' of ' + cards.length + ' projects';
+            empty.hidden = matches.length > 0;
+        }
+
+        chips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                const tag = chip.dataset.tag.toLowerCase();
+                if (selected.has(tag)) selected.delete(tag); else selected.add(tag);
+                chip.setAttribute('aria-pressed', selected.has(tag) ? 'true' : 'false');
+                update();
+            });
+        });
+        input.addEventListener('input', update);
+        update();
+    })();
+    </script>
+"""
+
+
 def index_page(projects):
     cards = "".join(
         f"""
-                <a href="./{esc(p["slug"])}/" class="project-card">
+                <a href="./{esc(p["slug"])}/" class="project-card" data-search="{esc(search_text(p))}" data-tags="{esc("|".join(t.lower() for t in filter_tags(p)))}">
                     <div class="project-header">
                         <h3 class="project-name">{esc(p["name"])}</h3>
                         <span class="project-arrow">→</span>
@@ -130,6 +198,19 @@ def index_page(projects):
                 </a>"""
         for p in projects
     )
+
+    # One chip per tag or language shared by at least two projects; rarer ones are found by search.
+    counts = {}
+    for p in projects:
+        for t in filter_tags(p):
+            counts[t] = counts.get(t, 0) + 1
+    chips = "".join(
+        f'<button type="button" class="tag-filter" data-tag="{esc(t)}" aria-pressed="false">'
+        f'{esc(t)} <small>{n}</small></button>'
+        for t, n in sorted(counts.items(), key=lambda kv: kv[0].lower())
+        if n >= 2
+    )
+
     return (
         head("All projects", "Public repositories by Filipe Moreno, one page each.", site="../")
         + f"""{nav("../", "./")}
@@ -139,14 +220,38 @@ def index_page(projects):
                 <span class="section-label">Projects</span>
                 <h1 class="section-title">Things I've built</h1>
                 <p class="project-lead">Public repositories, one page each. Most recently updated first.</p>
-                <div class="projects-grid">{cards}
+
+                <div class="projects-toolbar">
+                    <input id="project-search" class="project-search" type="search" autocomplete="off"
+                        placeholder="Search by name, tag or language…" aria-label="Search projects">
+                    <div class="project-filters" role="group" aria-label="Filter by tag">{chips}</div>
+                    <p class="project-count" id="project-count" aria-live="polite"></p>
                 </div>
+
+                <div class="projects-grid" id="projects-grid">{cards}
+                </div>
+                <p class="project-empty" id="project-empty" hidden>No projects match these filters.</p>
             </div>
         </section>
     </main>
 """
         + footer("../", "Back to portfolio ↑")
+        + FILTER_JS
     )
+
+
+def filter_tags(p):
+    """Tags plus language, de-duplicated case-insensitively, original casing kept."""
+    seen, out = set(), []
+    for t in list(p["tags"]) + ([p["language"]] if p.get("language") else []):
+        if t.lower() not in seen:
+            seen.add(t.lower())
+            out.append(t)
+    return out
+
+
+def search_text(p):
+    return " ".join([p["name"], p["description"], *filter_tags(p)]).lower()
 
 
 def main():
