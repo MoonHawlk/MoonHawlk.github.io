@@ -3,7 +3,7 @@
 
 Run from anywhere:  python3 projects/build_projects.py
 
-- "enabled": true  -> <slug>/index.html is generated and listed in projects/index.html
+- "enabled": true  -> projects/<slug>/index.html is generated and listed in projects/index.html
 - "enabled": false -> the generated page is removed and the project is not listed
 
 Only pages carrying the GENERATED marker are ever removed, so hand-made folders are safe.
@@ -23,11 +23,12 @@ FONTS = (
 )
 YEAR = date.today().year
 
-NAV = """    <nav class="nav" id="nav">
-        <a href="../" class="nav-logo">FM</a>
+def nav(site, projects):
+    return f"""    <nav class="nav" id="nav">
+        <a href="{site}" class="nav-logo">FM</a>
         <ul class="nav-links">
-            <li><a href="../projects/">Projects</a></li>
-            <li><a href="../#contact" class="nav-cta">Contact</a></li>
+            <li><a href="{projects}">Projects</a></li>
+            <li><a href="{site}#contact" class="nav-cta">Contact</a></li>
         </ul>
     </nav>"""
 
@@ -41,7 +42,7 @@ def fmt_date(iso):
     return f"{d.strftime('%B')} {d.day}, {d.year}"
 
 
-def head(title, description):
+def head(title, description, site):
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,12 +51,12 @@ def head(title, description):
     {MARKER}
     <title>{esc(title)} — Filipe Moreno</title>
     <meta name="description" content="{esc(description)}">
-    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="{site}favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="{FONTS}" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css?v=2">
-    <link rel="stylesheet" href="../projects/projects.css">
+    <link rel="stylesheet" href="{site}styles.css?v=2">
+    <link rel="stylesheet" href="{site}projects/projects.css">
 </head>
 <body>
 """
@@ -97,8 +98,8 @@ def project_page(p):
         )
 
     return (
-        head(p["name"], p["description"])
-        + f"""{NAV}
+        head(p["name"], p["description"], site="../../")
+        + f"""{nav("../../", "../")}
     <main>
         <section class="project-hero">
             <div class="section-inner">
@@ -112,14 +113,14 @@ def project_page(p):
         </section>
     </main>
 """
-        + footer("../projects/", "← All projects")
+        + footer("../", "← All projects")
     )
 
 
 def index_page(projects):
     cards = "".join(
         f"""
-                <a href="../{esc(p["slug"])}/" class="project-card">
+                <a href="./{esc(p["slug"])}/" class="project-card">
                     <div class="project-header">
                         <h3 class="project-name">{esc(p["name"])}</h3>
                         <span class="project-arrow">→</span>
@@ -130,8 +131,8 @@ def index_page(projects):
         for p in projects
     )
     return (
-        head("All projects", "Public repositories by Filipe Moreno, one page each.")
-        + f"""{NAV}
+        head("All projects", "Public repositories by Filipe Moreno, one page each.", site="../")
+        + f"""{nav("../", "./")}
     <main>
         <section class="projects-index">
             <div class="section-inner">
@@ -154,10 +155,10 @@ def main():
 
     for p in data["projects"]:
         slug = p["slug"]
-        if not slug or "/" in slug or slug == "projects":
+        if not slug or "/" in slug:
             raise SystemExit(f"invalid slug: {slug!r}")
 
-        folder = ROOT / slug
+        folder = PROJECTS_DIR / slug
         page = folder / "index.html"
 
         if p.get("enabled", True):
