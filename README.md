@@ -237,7 +237,7 @@ Then open [http://localhost:8080](http://localhost:8080). The local server shows
 
 ## License
 
-The code is under the MIT License. The written content, images, design files and the embedded Constellation Watches site are not; see [LICENSE](LICENSE).
+All rights reserved. You can view this repository, but using any part of it (code, content, images or the embedded Constellation Watches site) requires written permission first. To ask, write to filipemoreno.ds@gmail.com. See [LICENSE](LICENSE).
 
 ---
 

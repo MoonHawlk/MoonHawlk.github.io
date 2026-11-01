@@ -1,32 +1,27 @@
-The source code in this repository (HTML structure, CSS, JavaScript and the
-scripts in tools/) is licensed under the MIT License below.
+Copyright (c) 2026 Filipe Moreno. All rights reserved.
 
-Not covered by this license, all rights reserved:
-- the written content of the site, including the texts in index.html and
-  everything in content/;
-- the images and design files in assets/img/ and design/;
-- the Constellation Watches site and brand in constellation_watches/.
+This repository is public so that it can be viewed and served as a website.
+Being able to see the files does not give anyone permission to use them.
 
--------------------------------------------------------------------------------
+Everything in this repository is covered, including the source code (HTML,
+CSS, JavaScript and the scripts in tools/), the written content, the images
+and design files, and the Constellation Watches site and brand in
+constellation_watches/.
 
-MIT License
+You may:
+- view the files and the published website;
+- fork the repository on GitHub, as allowed by GitHub's Terms of Service,
+  without using the fork for anything else.
 
-Copyright (c) 2026 Filipe Moreno
+You may not, without written permission from the author:
+- copy, reuse or adapt any part of this repository, in whole or in part;
+- publish, distribute or host it, or any work based on it;
+- use it in any personal or commercial project.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+To ask for permission, write to filipemoreno.ds@gmail.com and describe what
+you would like to use and how. Permission, when given, applies only to the
+use described in the request.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+THE FILES ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY ARISING FROM THE FILES OR THEIR USE.
