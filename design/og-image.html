@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #F7F5F0;
+    }
+
+    .card {
+      width: 1200px;
+      height: 630px;
+      position: relative;
+      overflow: hidden;
+      background: #F7F5F0;
+    }
+
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+    }
+    .blob-green {
+      width: 820px;
+      height: 700px;
+      top: -260px;
+      right: -120px;
+      background: radial-gradient(ellipse, rgba(168, 196, 154, 0.40) 0%, transparent 65%);
+    }
+    .blob-blue {
+      width: 600px;
+      height: 520px;
+      bottom: -220px;
+      right: -140px;
+      background: radial-gradient(ellipse, rgba(123, 175, 196, 0.32) 0%, transparent 65%);
+    }
+    .blob-warm {
+      width: 460px;
+      height: 360px;
+      bottom: -140px;
+      left: -80px;
+      background: radial-gradient(ellipse, rgba(212, 184, 150, 0.22) 0%, transparent 70%);
+    }
+
+    .botanical {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .content {
+      position: absolute;
+      left: 96px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #6B8F5E;
+      margin-bottom: 22px;
+    }
+
+    .name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 128px;
+      font-weight: 300;
+      color: #1E2D1F;
+      line-height: 0.95;
+      letter-spacing: -2px;
+      margin-bottom: 30px;
+    }
+
+    .rule {
+      width: 520px;
+      height: 1px;
+      background: #D8D3C8;
+      margin-bottom: 28px;
+    }
+
+    .tags {
+      display: flex;
+      gap: 10px;
+    }
+
+    .tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      font-weight: 500;
+      padding: 8px 20px;
+      border-radius: 100px;
+      letter-spacing: 0.05em;
+    }
+    .tag-green {
+      color: #6B8F5E;
+      background: rgba(107, 143, 94, 0.13);
+    }
+    .tag-blue {
+      color: #5E93A9;
+      background: rgba(123, 175, 196, 0.18);
+    }
+
+    .url {
+      position: absolute;
+      bottom: 44px;
+      left: 96px;
+      font-family: 'Inter', sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      color: #6B7868;
+      letter-spacing: 0.06em;
+    }
+
+    .monogram {
+      position: absolute;
+      bottom: 38px;
+      right: 56px;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 30px;
+      font-weight: 300;
+      color: #6B8F5E;
+      opacity: 0.5;
+      letter-spacing: 0.12em;
+    }
+  </style>
+</head>
+<body>
+<div class="card">
+  <div class="blob blob-green"></div>
+  <div class="blob blob-blue"></div>
+  <div class="blob blob-warm"></div>
+
+  <svg class="botanical" width="460" height="630" viewBox="0 0 460 630" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M300 -50 C340 -50 450 30 425 200 C410 295 350 360 275 368 C275 368 120 314 138 152 C154 16 240 -50 300 -50 Z" fill="#6B8F5E" opacity="0.13"/>
+    <line x1="278" y1="364" x2="285" y2="14" stroke="#6B8F5E" stroke-width="2" stroke-linecap="round" opacity="0.2"/>
+    <line x1="284" y1="192" x2="372" y2="117" stroke="#6B8F5E" stroke-width="1.6" stroke-linecap="round" opacity="0.18"/>
+    <line x1="281" y1="261" x2="190" y2="200" stroke="#6B8F5E" stroke-width="1.6" stroke-linecap="round" opacity="0.18"/>
+    <line x1="283" y1="137" x2="343" y2="82" stroke="#6B8F5E" stroke-width="1.3" stroke-linecap="round" opacity="0.14"/>
+    <path d="M420 330 C443 323 483 374 466 465 C454 525 418 563 378 569 C378 569 310 539 322 454 C333 378 384 337 420 330 Z" fill="#7BAFC4" opacity="0.16"/>
+    <line x1="384" y1="566" x2="392" y2="344" stroke="#7BAFC4" stroke-width="1.8" stroke-linecap="round" opacity="0.22"/>
+    <line x1="389" y1="454" x2="447" y2="406" stroke="#7BAFC4" stroke-width="1.3" stroke-linecap="round" opacity="0.18"/>
+    <path d="M200 520 C230 470 260 420 290 380" stroke="#6B8F5E" stroke-width="1.3" fill="none" stroke-linecap="round" opacity="0.12"/>
+    <circle cx="120" cy="330" r="3.2" fill="#6B8F5E" opacity="0.14"/>
+    <circle cx="160" cy="430" r="2.6" fill="#7BAFC4" opacity="0.15"/>
+    <circle cx="360" cy="290" r="2.8" fill="#7BAFC4" opacity="0.12"/>
+    <circle cx="210" cy="250" r="2" fill="#6B8F5E" opacity="0.1"/>
+  </svg>
+
+  <div class="content">
+    <p class="eyebrow">Data Scientist · Recife, Brazil</p>
+    <h1 class="name">Filipe Moreno</h1>
+    <div class="rule"></div>
+    <div class="tags">
+      <span class="tag tag-green">LLMs</span>
+      <span class="tag tag-green">NLP</span>
+      <span class="tag tag-green">RAG</span>
+      <span class="tag tag-blue">GenAI</span>
+      <span class="tag tag-blue">Python</span>
+    </div>
+  </div>
+
+  <p class="url">moonhawlk.github.io</p>
+  <div class="monogram">FM</div>
+</div>
+</body>
+</html>

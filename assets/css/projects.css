@@ -1,7 +1,7 @@
 /* ============================================================
    PROJECT PAGES
    Layout only. Colours, type, buttons, tags and cards come from
-   ../styles.css, so every token in DESIGN_SYSTEM.md still applies.
+   styles.css, so every token in design/DESIGN_SYSTEM.md still applies.
    ============================================================ */
 
 .project-hero,
@@ -74,7 +74,7 @@
 
 /* ============================================================
    PROJECT INDEX: SEARCH AND TAG FILTERS
-   Follows DESIGN_SYSTEM.md: pill controls, tag tints, primary
+   Follows design/DESIGN_SYSTEM.md: pill controls, tag tints, primary
    button for the selected state, everything centred.
    ============================================================ */
 .projects-toolbar {

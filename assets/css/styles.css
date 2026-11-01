@@ -248,6 +248,10 @@ section:nth-of-type(even) {
     background-color: var(--bg-alt);
 }
 
+#posts[hidden] + #contact {
+    background-color: var(--bg);
+}
+
 .section-inner {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -443,6 +447,10 @@ section:nth-of-type(even) {
     gap: 0.4rem;
 }
 
+.section-more {
+    margin-top: 2.5rem;
+}
+
 .project-tags span {
     font-size: 0.75rem;
     font-weight: 500;
@@ -501,34 +509,6 @@ section:nth-of-type(even) {
     font-size: 0.9rem;
     color: var(--text-muted);
     line-height: 1.65;
-}
-
-.posts-empty {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-}
-
-/* Markdown fallback styles (when posts.md renders raw) */
-.posts-list h1,
-.posts-list h2,
-.posts-list h3 {
-    font-family: var(--font-display);
-    font-weight: 400;
-    color: var(--text);
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.posts-list p {
-    color: var(--text-muted);
-    font-size: 0.93rem;
-    margin-bottom: 0.75rem;
-}
-
-.posts-list a {
-    color: var(--green);
-    text-decoration: underline;
-    text-underline-offset: 3px;
 }
 
 /* ============================================================

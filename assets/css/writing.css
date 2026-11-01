@@ -1,0 +1,97 @@
+/* ============================================================
+   POST PAGES
+   Layout only. Colours and type come from styles.css.
+   ============================================================ */
+
+.post {
+    padding: 8rem 2rem var(--section-gap);
+}
+
+.post .section-title {
+    margin-bottom: 0.75rem;
+}
+
+.post-meta {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+    margin-bottom: 2.5rem;
+}
+
+.post-body {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: var(--text);
+}
+
+.post-body > * + * {
+    margin-top: 1.25rem;
+}
+
+.post-body h2,
+.post-body h3,
+.post-body h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 1.3;
+    margin-top: 2.5rem;
+}
+
+.post-body h2 { font-size: 1.7rem; }
+.post-body h3 { font-size: 1.35rem; }
+.post-body h4 { font-size: 1.1rem; }
+
+.post-body a {
+    color: var(--green);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.post-body ul,
+.post-body ol {
+    padding-left: 1.4rem;
+}
+
+.post-body ul { list-style: disc; }
+.post-body ol { list-style: decimal; }
+
+.post-body li + li {
+    margin-top: 0.4rem;
+}
+
+.post-body blockquote {
+    padding-left: 1.25rem;
+    border-left: 2px solid var(--green-light);
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.post-body code {
+    font-size: 0.88em;
+    background-color: var(--bg-alt);
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+}
+
+.post-body pre {
+    padding: 1.25rem;
+    overflow-x: auto;
+    background-color: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.post-body pre code {
+    padding: 0;
+    background: none;
+}
+
+.post-body img {
+    border-radius: 12px;
+}
+
+@media (max-width: 700px) {
+    .post {
+        padding-top: 7rem;
+    }
+}

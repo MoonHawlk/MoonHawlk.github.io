@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1584px;
+      height: 396px;
+      overflow: hidden;
+      background: #F7F5F0;
+    }
+
+    .banner {
+      width: 1584px;
+      height: 396px;
+      background: #F7F5F0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ── Gradient blobs ── */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .blob-green {
+      width: 780px;
+      height: 620px;
+      top: -220px;
+      right: 180px;
+      background: radial-gradient(ellipse, rgba(168, 196, 154, 0.38) 0%, transparent 65%);
+    }
+    .blob-blue {
+      width: 520px;
+      height: 440px;
+      bottom: -160px;
+      right: -60px;
+      background: radial-gradient(ellipse, rgba(123, 175, 196, 0.32) 0%, transparent 65%);
+    }
+    .blob-warm {
+      width: 340px;
+      height: 280px;
+      bottom: -80px;
+      left: 260px;
+      background: radial-gradient(ellipse, rgba(212, 184, 150, 0.18) 0%, transparent 70%);
+    }
+
+    /* ── Botanical SVG ── */
+    .botanical {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    /* ── Content ── */
+    .content {
+      position: absolute;
+      left: 348px;
+      top: 50%;
+      transform: translateY(-52%);
+    }
+
+    .eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 11.5px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #6B8F5E;
+      margin-bottom: 14px;
+    }
+
+    .name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 90px;
+      font-weight: 300;
+      color: #1E2D1F;
+      line-height: 0.95;
+      letter-spacing: -1.5px;
+      margin-bottom: 18px;
+    }
+
+    .role {
+      font-family: 'Inter', sans-serif;
+      font-size: 14.5px;
+      font-weight: 300;
+      color: #6B7868;
+      letter-spacing: 0.08em;
+      margin-bottom: 22px;
+    }
+
+    .tags {
+      display: flex;
+      gap: 7px;
+    }
+
+    .tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 10.5px;
+      font-weight: 500;
+      padding: 5px 13px;
+      border-radius: 100px;
+      letter-spacing: 0.05em;
+    }
+    .tag-green {
+      color: #6B8F5E;
+      background: rgba(107, 143, 94, 0.13);
+    }
+    .tag-blue {
+      color: #7BAFC4;
+      background: rgba(123, 175, 196, 0.16);
+    }
+
+    /* ── Thin rule above tags ── */
+    .rule {
+      width: 380px;
+      height: 1px;
+      background: #D8D3C8;
+      margin-bottom: 18px;
+    }
+
+    /* ── FM monogram ── */
+    .monogram {
+      position: absolute;
+      bottom: 28px;
+      right: 44px;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 22px;
+      font-weight: 300;
+      color: #6B8F5E;
+      opacity: 0.45;
+      letter-spacing: 0.12em;
+    }
+  </style>
+</head>
+<body>
+<div class="banner">
+
+  <!-- Background blobs -->
+  <div class="blob blob-green"></div>
+  <div class="blob blob-blue"></div>
+  <div class="blob blob-warm"></div>
+
+  <!-- Botanical illustration -->
+  <svg class="botanical" width="520" height="396" viewBox="0 0 520 396"
+       fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+
+    <!-- Large main leaf — top right -->
+    <path d="M370 -40
+             C400 -40 480 20 460 145
+             C448 215 405 262 350 268
+             C350 268 235 228 248 110
+             C260 10 325 -40 370 -40 Z"
+          fill="#6B8F5E" opacity="0.13"/>
+    <line x1="353" y1="265" x2="358" y2="10"
+          stroke="#6B8F5E" stroke-width="1.6" stroke-linecap="round" opacity="0.2"/>
+    <line x1="357" y1="140" x2="422" y2="85"
+          stroke="#6B8F5E" stroke-width="1.2" stroke-linecap="round" opacity="0.18"/>
+    <line x1="355" y1="190" x2="288" y2="145"
+          stroke="#6B8F5E" stroke-width="1.2" stroke-linecap="round" opacity="0.18"/>
+    <line x1="356" y1="100" x2="400" y2="60"
+          stroke="#6B8F5E" stroke-width="1" stroke-linecap="round" opacity="0.14"/>
+
+    <!-- Second leaf — mid lower right -->
+    <path d="M478 220
+             C495 215 524 252 512 318
+             C503 362 477 390 448 394
+             C448 394 398 372 407 310
+             C415 255 452 225 478 220 Z"
+          fill="#7BAFC4" opacity="0.16"/>
+    <line x1="452" y1="392" x2="458" y2="230"
+          stroke="#7BAFC4" stroke-width="1.4" stroke-linecap="round" opacity="0.22"/>
+    <line x1="456" y1="310" x2="498" y2="275"
+          stroke="#7BAFC4" stroke-width="1" stroke-linecap="round" opacity="0.18"/>
+
+    <!-- Accent leaf — small, mid left of botanical area -->
+    <path d="M200 290
+             C210 284 232 296 228 328
+             C225 350 212 365 196 366
+             C196 366 168 353 172 323
+             C175 298 186 294 200 290 Z"
+          fill="#6B8F5E" opacity="0.1"/>
+    <line x1="198" y1="364" x2="202" y2="296"
+          stroke="#6B8F5E" stroke-width="1" stroke-linecap="round" opacity="0.15"/>
+
+    <!-- Delicate stem / branch lines -->
+    <path d="M280 380 C300 340 340 300 370 270"
+          stroke="#6B8F5E" stroke-width="1" fill="none"
+          stroke-linecap="round" opacity="0.12"/>
+    <path d="M310 370 C320 350 310 320 330 300"
+          stroke="#6B7868" stroke-width="0.8" fill="none"
+          stroke-linecap="round" opacity="0.1"/>
+
+    <!-- Small floating dots — spores / seeds -->
+    <circle cx="168" cy="250" r="2.5" fill="#6B8F5E" opacity="0.14"/>
+    <circle cx="235" cy="195" r="1.8" fill="#6B8F5E" opacity="0.12"/>
+    <circle cx="148" cy="310" r="2" fill="#7BAFC4" opacity="0.15"/>
+    <circle cx="420" cy="200" r="2.2" fill="#7BAFC4" opacity="0.12"/>
+    <circle cx="300" cy="170" r="1.5" fill="#6B8F5E" opacity="0.1"/>
+  </svg>
+
+  <!-- Text content -->
+  <div class="content">
+    <p class="eyebrow">Data Scientist · SiDi</p>
+    <h1 class="name">Filipe Moreno</h1>
+    <div class="rule"></div>
+    <p class="role">LLMs &nbsp;·&nbsp; NLP &nbsp;·&nbsp; RAG &nbsp;·&nbsp; GenAI &nbsp;·&nbsp; Recife, Brazil</p>
+    <div class="tags">
+      <span class="tag tag-green">LLMs</span>
+      <span class="tag tag-green">NLP</span>
+      <span class="tag tag-green">RAG</span>
+      <span class="tag tag-blue">GenAI</span>
+      <span class="tag tag-blue">Python</span>
+      <span class="tag tag-green">Data Science</span>
+    </div>
+  </div>
+
+  <!-- FM monogram -->
+  <div class="monogram">FM</div>
+
+</div>
+</body>
+</html>

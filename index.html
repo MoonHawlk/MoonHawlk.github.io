@@ -8,27 +8,31 @@
     <meta property="og:title" content="Filipe Moreno | AI & Data" data-site-content="title">
     <meta property="og:description" content="Filipe Moreno, data scientist working with LLMs, NLP, RAG and data visualization." data-site-content="description">
     <meta property="og:type" content="website">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta property="og:url" content="https://moonhawlk.github.io/">
+    <meta property="og:image" content="https://moonhawlk.github.io/assets/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Filipe Moreno, data scientist working with LLMs, NLP, RAG and GenAI">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="stylesheet" href="assets/css/styles.css?v=32d96fb8">
 </head>
-<body>
+<body data-page="home">
 
-    <!-- Navigation -->
     <nav class="nav" id="nav">
         <a href="#hero" class="nav-logo" data-site="initials">FM</a>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#posts">Writing</a></li>
+            <li data-posts-section hidden><a href="#posts">Writing</a></li>
             <li><a href="#contact" class="nav-cta">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Hero -->
     <section id="hero">
         <div class="hero-content">
             <p class="hero-eyebrow">Hi, I'm</p>
@@ -43,7 +47,6 @@
         <div class="hero-decoration" aria-hidden="true"></div>
     </section>
 
-    <!-- About -->
     <section id="about">
         <div class="section-inner">
             <span class="section-label">About</span>
@@ -71,7 +74,6 @@
         </div>
     </section>
 
-    <!-- Experience -->
     <section id="experience">
         <div class="section-inner">
             <span class="section-label">Experience</span>
@@ -145,7 +147,6 @@
         </div>
     </section>
 
-    <!-- Projects -->
     <section id="projects">
         <div class="section-inner">
             <span class="section-label">Projects</span>
@@ -234,24 +235,20 @@
 
             </div>
 
-            <div class="hero-actions" style="margin-top: 2.5rem;">
+            <div class="hero-actions section-more">
                 <a href="projects/" class="btn btn-primary">See more projects →</a>
             </div>
         </div>
     </section>
 
-    <!-- Posts / Writing -->
-    <section id="posts">
+    <section id="posts" data-posts-section hidden>
         <div class="section-inner">
             <span class="section-label">Writing</span>
             <h2 class="section-title">Notes & thoughts</h2>
-            <div class="posts-list" id="posts-list">
-                <p class="posts-empty">Loading posts…</p>
-            </div>
+            <div class="posts-list" id="posts-list"></div>
         </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact">
         <div class="section-inner contact-inner">
             <span class="section-label">Contact</span>
@@ -281,7 +278,6 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="scripts.js"></script>
+    <script src="assets/js/scripts.js?v=f62d293a"></script>
 </body>
 </html>
