@@ -1,0 +1,2 @@
+window.COMPLEMENTOS_ITEMS = [
+];

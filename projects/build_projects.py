@@ -22,10 +22,12 @@ FONTS = (
     "&family=Inter:wght@300;400;500&display=swap"
 )
 YEAR = date.today().year
+SITE = json.loads((ROOT / "site.json").read_text(encoding="utf-8"))
+COPYRIGHT = SITE["copyright"].format(year=YEAR, **SITE)
 
 def nav(site, projects):
     return f"""    <nav class="nav" id="nav">
-        <a href="{site}" class="nav-logo">FM</a>
+        <a href="{site}" class="nav-logo">{esc(SITE["initials"])}</a>
         <ul class="nav-links">
             <li><a href="{projects}">Projects</a></li>
             <li><a href="{site}#contact" class="nav-cta">Contact</a></li>
@@ -49,7 +51,7 @@ def head(title, description, site):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {MARKER}
-    <title>{esc(title)} · Filipe Moreno</title>
+    <title>{esc(title)} · {esc(SITE["name"])}</title>
     <meta name="description" content="{esc(description)}">
     <link rel="icon" href="{site}favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,7 +67,7 @@ def head(title, description, site):
 def footer(back_href, back_label):
     return f"""    <footer>
         <div class="footer-inner">
-            <p class="footer-copy">&copy; {YEAR} Filipe Moreno</p>
+            <p class="footer-copy">{esc(COPYRIGHT)}</p>
             <a href="{back_href}" class="footer-back">{back_label}</a>
         </div>
     </footer>
@@ -212,7 +214,7 @@ def index_page(projects):
     )
 
     return (
-        head("All projects", "Public repositories by Filipe Moreno, one page each.", site="../")
+        head("All projects", f"Public repositories by {SITE['name']}, one page each.", site="../")
         + f"""{nav("../", "./")}
     <main>
         <section class="projects-index">

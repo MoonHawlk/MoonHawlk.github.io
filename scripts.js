@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    applySiteInfo();
+
     const postsList = document.getElementById('posts-list');
 
     fetch('posts.md')
@@ -41,6 +43,30 @@ document.addEventListener('DOMContentLoaded', () => {
             postsList.innerHTML = '<p class="posts-empty">Posts unavailable.</p>';
         });
 });
+
+// Fills every element tagged with data-site, data-site-href or data-site-content from site.json
+function applySiteInfo() {
+    fetch('site.json')
+        .then(response => response.json())
+        .then(site => {
+            site.year = String(new Date().getFullYear());
+            const value = key => (site[key] || '').replace(/\{(\w+)\}/g, (match, name) => site[name] ?? match);
+            const display = text => text.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+
+            document.querySelectorAll('[data-site]').forEach(el => {
+                if (site[el.dataset.site]) el.textContent = display(value(el.dataset.site));
+            });
+            document.querySelectorAll('[data-site-href]').forEach(el => {
+                const key = el.dataset.siteHref;
+                if (site[key]) el.href = key === 'email' ? `mailto:${value(key)}` : value(key);
+            });
+            document.querySelectorAll('[data-site-content]').forEach(el => {
+                if (site[el.dataset.siteContent]) el.content = value(el.dataset.siteContent);
+            });
+            if (site.title) document.title = value('title');
+        })
+        .catch(() => {});
+}
 
 function buildPostCard(title, date, excerpt) {
     return `

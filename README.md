@@ -1,6 +1,6 @@
 # MoonHawlk.github.io
 
-Personal portfolio website for Filipe Moreno — Data Scientist working with LLMs, NLP, RAG and GenAI.
+Personal portfolio website for Filipe Moreno, a data scientist working with LLMs, NLP, RAG and GenAI.
 
 **Live at:** [moonhawlk.github.io](https://moonhawlk.github.io)
 
@@ -17,10 +17,14 @@ Plain HTML, CSS and vanilla JavaScript. No build step, no framework, no dependen
 ```
 .
 ├── index.html            # Full single-page site (all sections)
+├── site.json             # Name, company, contacts, copyright (see "Site Info")
 ├── styles.css            # All styling: variables, layout, components, responsive
 ├── scripts.js            # Posts parser: reads posts.md and renders cards
 ├── posts.md              # Your writing: edit this to publish posts
 ├── favicon.svg           # SVG leaf icon
+├── tools/
+│   └── sync_embeds.py    # Copies other repositories in as folders (see "Embedded Sites")
+├── constellation_watches/ # Constellation Watches store, generated, do not edit by hand
 └── projects/
     ├── projects.json     # List of projects shown on the site (edit this)
     ├── build_projects.py # Generates the project pages and the projects index
@@ -45,7 +49,25 @@ One sentence that appears as the excerpt on the card.
 - The date line (`_YYYY-MM-DD_`) is optional
 - The next non-empty line becomes the excerpt shown on the site
 
-No code changes needed — saving the file is enough.
+No code changes needed. Saving the file is enough.
+
+---
+
+## Site Info (`site.json`)
+
+Details that show up in several places live in `site.json`: name, initials, role, current company, location, email, LinkedIn, GitHub, page title, description and copyright.
+
+```json
+{
+    "company": "SiDi",
+    "copyright": "© {year} {name}"
+}
+```
+
+- A value can use another one inside braces, such as `{name}` or `{company}`. `{year}` is always the current year.
+- On the home page, an element marked `data-site="company"` shows that value, `data-site-href="email"` sets a link, and `data-site-content="description"` sets a meta tag. To use a value somewhere new, add the attribute to the element.
+- Project pages read the name, initials and copyright when they are built, so run `python3 projects/build_projects.py` after changing those.
+- Link previews on LinkedIn, WhatsApp and similar apps do not run JavaScript, so they show the text written in the `<head>` of `index.html`. That text avoids details that change, such as the company.
 
 ---
 
@@ -53,12 +75,12 @@ No code changes needed — saving the file is enough.
 
 | What to change | Where |
 |---|---|
-| Bio, hero text, about section | `index.html` — `#about` section |
-| Experience entries | `index.html` — `#experience` section |
+| Name, company, contacts, copyright | `site.json` |
+| Bio, hero text, about section | `index.html`, `#about` section |
+| Experience entries | `index.html`, `#experience` section (roles and dates are written there; past companies do not change) |
 | Featured project cards (home) | `index.html`, `#projects` section |
 | All project pages and the `/projects/` list | `projects/projects.json`, then run the build script |
-| Contact links | `index.html` — `#contact` section |
-| Colors, fonts, spacing | `styles.css` — `:root` variables at the top |
+| Colors, fonts, spacing | `styles.css`, `:root` variables at the top |
 
 ---
 
@@ -104,6 +126,42 @@ Run it after any change to `projects.json` and commit the generated pages togeth
 ### Search and filters
 
 On `/projects/`, the search box matches names, descriptions, tags and languages, and it tolerates partial or misspelled input (for example `lmm` finds `LLM`). The tag chips appear for every tag shared by at least two projects, and selecting several chips narrows the list to projects that have all of them.
+
+---
+
+## Embedded Sites
+
+Other projects of mine are published inside this site as plain folders, each served by GitHub Pages at `/<folder>/`. Their source stays in their own repositories; `tools/sync_embeds.py` copies them in.
+
+| Folder | Source repository | Live at |
+|---|---|---|
+| `constellation_watches/` | [constallation_watches_store](https://github.com/MoonHawlk/constallation_watches_store) | [moonhawlk.github.io/constellation_watches/](https://moonhawlk.github.io/constellation_watches/) |
+
+When it copies a repository, the script:
+
+- leaves out files that only matter to the original repository, such as its hosting setup (`.htaccess`, `DEPLOY.md`), its dev docs (`README.md`, `CLAUDE.md`) and the `.github/` folder;
+- removes every comment from the HTML, CSS, JS and SVG files, without changing any code;
+- stops with an error if a forbidden word (for the store: Hostinger, hPanel, FTP deploy) is still present;
+- writes `.embed-source` in the folder with the repository and commit it was copied from.
+
+The original repositories are never modified, so the store keeps its own deploy.
+
+### Update an embedded site
+
+Copies do not follow the original repository on their own. After pushing to the store, run:
+
+```bash
+python tools/sync_embeds.py constellation_watches
+git add constellation_watches
+git commit -m "Update Constellation Watches store"
+git push
+```
+
+Run it without arguments to update every embedded site. Do not edit these folders by hand, since the next sync replaces them.
+
+### Add an embedded site
+
+Add an entry to `EMBEDS` at the top of `tools/sync_embeds.py` with the folder name, repository URL, branch, the files to leave out and, optionally, words that must not appear. Then run the script. The site must use relative paths (`style.css`, not `/style.css`) to work inside a folder.
 
 ---
 

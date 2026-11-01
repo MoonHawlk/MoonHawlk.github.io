@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="40 40 100 120">
+  <title>Constellation Watches — Interlocked CW</title>
+  <path d="M126,62 A46,46 0 1,0 126,138" fill="none" stroke="#d4af37" stroke-width="4" stroke-linecap="round"/>
+  <path d="M78,84 L90,132 L102,96 L114,132 L126,84" fill="none" stroke="#d4af37" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

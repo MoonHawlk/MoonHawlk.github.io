@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Constellation Watches — Tempo, Sob Medida para Você</title>
+  <meta id="metaDescription" name="description" content="Curadoria e montagem artesanal de relógios sob medida. Sourcing internacional, inspeção e calibragem in-house — uma peça única, feita para você." />
+  <meta name="theme-color" content="#0a1628" />
+  <meta property="og:title" content="Constellation Watches" />
+  <meta id="metaOgDescription" property="og:description" content="Curadoria e montagem artesanal de relógios sob medida, feita para você." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <svg class="cw-mark" width="56" height="56" viewBox="40 40 100 120" role="img" aria-label="Constellation Watches">
+          <path d="M126,62 A46,46 0 1,0 126,138" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          <path d="M78,84 L90,132 L102,96 L114,132 L126,84" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Constellation</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link" data-i18n="nav.about">Sobre</a></li>
+        <li><a href="#how-it-works" class="nav-link" data-i18n="nav.process">Processo</a></li>
+        <li><a href="#watches" class="nav-link" data-i18n="nav.collection">Coleção</a></li>
+        <li><a href="acervo.html" class="nav-link" data-i18n="nav.acervo">Acervo</a></li>
+        <li><a href="complementos.html" class="nav-link" data-i18n="nav.complementos">Complementos</a></li>
+        <li><a href="#customization" class="nav-link" data-i18n="nav.customize">Personalizar</a></li>
+        <li><a href="#testimonials" class="nav-link" data-i18n="nav.testimonials">Depoimentos</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contato</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Mudar idioma" data-i18n-aria-label="nav.langToggleLabel">
+          <span class="lang-option active" data-lang="pt">PT</span>
+          <span class="lang-divider" aria-hidden="true">/</span>
+          <span class="lang-option" data-lang="en">EN</span>
+        </button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema" data-i18n-aria-label="nav.themeToggleLabel">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" data-i18n-aria-label="nav.menuToggleLabel">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <canvas id="starCanvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal" data-i18n="hero.eyebrow">Est. 2025 · Recife, Brasil</p>
+      <h1 class="hero-title reveal" data-i18n="hero.title">Tempo,<br /><em>Sob Medida para Você</em></h1>
+      <p class="hero-subtitle reveal" data-i18n="hero.subtitle">Cada relógio Constellation nasce de uma conversa e ganha forma através de curadoria internacional, inspeção rigorosa e montagem cuidadosa — feito para você, peça única.</p>
+      <div class="hero-actions reveal">
+        <a href="#customization" class="btn btn-primary" data-i18n="hero.ctaPrimary">Iniciar Sua Comissão</a>
+        <a href="#watches" class="btn btn-outline" data-i18n="hero.ctaSecondary">Ver Coleção</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      <span data-i18n="hero.scroll">Role</span>
+    </div>
+  </section>
+
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <div class="about-img-frame">
+            <div class="about-img-placeholder">
+              <svg width="80" height="80" viewBox="0 0 80 80" fill="none" opacity="0.3">
+                <circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="2"/>
+                <circle cx="40" cy="40" r="6" fill="currentColor"/>
+                <line x1="40" y1="10" x2="40" y2="22" stroke="currentColor" stroke-width="2"/>
+                <line x1="40" y1="40" x2="54" y2="26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="40" y1="40" x2="50" y2="48" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="about-img-accent"></div>
+          </div>
+        </div>
+        <div class="about-text">
+          <p class="section-label reveal" data-i18n="about.label">Nossa História</p>
+          <h2 class="section-title reveal" data-i18n="about.title">Onde a Curadoria Encontra a Precisão</h2>
+          <p class="about-body reveal" data-i18n="about.body1">A Constellation Watches nasceu da paixão por relojoaria e da crença de que um grande relógio não precisa ser produzido em massa para ser extraordinário. Cada peça começa com uma busca cuidadosa: percorro o mercado internacional em busca de componentes que unam estética, autenticidade e qualidade — sem atalhos.</p>
+          <p class="about-body reveal" data-i18n="about.body2">Da inspeção à calibragem, cada relógio passa pelas minhas mãos antes de chegar até você. É um processo artesanal, deliberadamente pequeno, feito para quem valoriza atenção aos detalhes mais do que um nome de grife.</p>
+          <div class="about-pillars reveal">
+            <div class="pillar-item">
+              <svg class="pillar-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.4">
+                <circle cx="13" cy="13" r="10"/>
+                <path d="M3 13h20M13 3c3 3 3 17 0 20M13 3c-3 3-3 17 0 20" />
+              </svg>
+              <span class="pillar-label" data-i18n="about.pillar1">Fornecedores Internacionais</span>
+            </div>
+            <div class="pillar-item">
+              <svg class="pillar-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.4">
+                <circle cx="13" cy="13" r="4.5"/>
+                <path d="M13 2v4M13 20v4M2 13h4M20 13h4M5.6 5.6l2.6 2.6M17.8 17.8l2.6 2.6M20.4 5.6l-2.6 2.6M8.2 17.8l-2.6 2.6" stroke-linecap="round"/>
+              </svg>
+              <span class="pillar-label" data-i18n="about.pillar2">Montagem &amp; Calibragem In-House</span>
+            </div>
+            <div class="pillar-item">
+              <svg class="pillar-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.4">
+                <path d="M13 2l3.3 6.8L23 10l-5 5 1.2 7-6.2-3.4L6.8 22 8 15l-5-5 6.7-1.2z"/>
+              </svg>
+              <span class="pillar-label" data-i18n="about.pillar3">Peças Sob Medida</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works section" id="how-it-works">
+    <div class="container">
+      <p class="section-label text-center reveal" data-i18n="how.label">O Processo</p>
+      <h2 class="section-title text-center reveal" data-i18n="how.title">Da Ideia ao Pulso</h2>
+      <div class="steps-grid">
+        <div class="step reveal">
+          <div class="step-number">01</div>
+          <div class="step-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M6 8h20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H14l-6 6V22H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z"/>
+              <line x1="10" y1="14" x2="22" y2="14" stroke-linecap="round"/>
+              <line x1="10" y1="18" x2="18" y2="18" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="step-title" data-i18n="how.step1Title">Consulta</h3>
+          <p class="step-desc" data-i18n="how.step1Desc">Uma conversa direta para entender seu estilo, orçamento e o propósito do relógio — uso diário, ocasião especial ou peça de coleção.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-number">02</div>
+          <div class="step-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="14" cy="14" r="9"/>
+              <line x1="20.5" y1="20.5" x2="27" y2="27" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="step-title" data-i18n="how.step2Title">Curadoria &amp; Importação</h3>
+          <p class="step-desc" data-i18n="how.step2Desc">Pesquiso fornecedores internacionais, avaliando estética, autenticidade e custo-benefício de cada componente antes de realizar a importação.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-number">03</div>
+          <div class="step-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="16" cy="16" r="5"/>
+              <path d="M16 4v4M16 24v4M4 16h4M24 16h4M7.5 7.5l2.8 2.8M21.7 21.7l2.8 2.8M24.5 7.5l-2.8 2.8M10.3 21.7l-2.8 2.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="step-title" data-i18n="how.step3Title">Inspeção &amp; Montagem</h3>
+          <p class="step-desc" data-i18n="how.step3Desc">Cada peça é inspecionada, montada e calibrada in-house, com limpeza detalhada para garantir qualidade e resistência ao longo do tempo.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-number">04</div>
+          <div class="step-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 16l8 8L28 8"/>
+            </svg>
+          </div>
+          <h3 class="step-title" data-i18n="how.step4Title">Apresentação &amp; Entrega</h3>
+          <p class="step-desc" data-i18n="how.step4Desc">Seu relógio chega em uma embalagem dedicada, escolhida a dedo, acompanhada de uma carta explicando a peça e os detalhes da montagem.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="watches section" id="watches">
+    <div class="container">
+      <p class="section-label text-center reveal" data-i18n="watches.label">A Coleção</p>
+      <h2 class="section-title text-center reveal" data-i18n="watches.title">Exemplos de Montagem</h2>
+      <p class="section-subtitle text-center reveal" data-i18n="watches.subtitle">Cada peça é fruto de uma seleção criteriosa de componentes e uma montagem sob medida — exemplos do que é possível criar para você.</p>
+      <div class="watches-grid">
+        <div class="watch-card reveal">
+          <div class="watch-card-image">
+            <div class="watch-placeholder">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" opacity="0.4">
+                <circle cx="32" cy="32" r="26" stroke="currentColor" stroke-width="2"/>
+                <circle cx="32" cy="32" r="4" fill="currentColor"/>
+                <line x1="32" y1="10" x2="32" y2="18" stroke="currentColor" stroke-width="2"/>
+                <line x1="32" y1="32" x2="44" y2="22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="32" y1="32" x2="40" y2="40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <rect x="24" y="4" width="16" height="6" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="24" y="54" width="16" height="6" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="watch-card-badge" data-i18n="watches.card1Badge">Clássico Automático</div>
+          </div>
+          <div class="watch-card-body">
+            <h3 class="watch-card-name">The Meridian</h3>
+            <p class="watch-card-detail" data-i18n="watches.card1Detail">Aço inoxidável · Mostrador sunburst · Automático · Reserva de marcha 72h</p>
+            <p class="watch-card-desc" data-i18n="watches.card1Desc">Um automático atemporal, pensado para o uso diário. Caixa em aço escovado, mostrador sunburst e movimento com 72 horas de reserva de marcha — selecionado e calibrado para durar.</p>
+            <a href="#contact" class="watch-card-link" data-i18n="watches.cardLink">Solicitar Peça Semelhante</a>
+          </div>
+        </div>
+        <div class="watch-card reveal">
+          <div class="watch-card-image">
+            <div class="watch-placeholder">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" opacity="0.4">
+                <circle cx="32" cy="32" r="26" stroke="currentColor" stroke-width="2"/>
+                <circle cx="32" cy="32" r="4" fill="currentColor"/>
+                <line x1="32" y1="10" x2="32" y2="18" stroke="currentColor" stroke-width="2"/>
+                <line x1="32" y1="32" x2="46" y2="28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="32" y1="32" x2="38" y2="42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <rect x="24" y="4" width="16" height="6" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="24" y="54" width="16" height="6" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="watch-card-badge" data-i18n="watches.card2Badge">Piloto</div>
+          </div>
+          <div class="watch-card-body">
+            <h3 class="watch-card-name">The Celestial</h3>
+            <p class="watch-card-detail" data-i18n="watches.card2Detail">Titânio grau 5 · Mostrador preto fosco · Cronógrafo · Pulseira em couro</p>
+            <p class="watch-card-desc" data-i18n="watches.card2Desc">Inspirado em instrumentos de aviação, com caixa em titânio leve e cronógrafo de alta legibilidade — para quem busca robustez sem abrir mão da elegância.</p>
+            <a href="#contact" class="watch-card-link" data-i18n="watches.cardLink">Solicitar Peça Semelhante</a>
+          </div>
+        </div>
+        <div class="watch-card reveal">
+          <div class="watch-card-image">
+            <div class="watch-placeholder">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" opacity="0.4">
+                <circle cx="32" cy="32" r="26" stroke="currentColor" stroke-width="2"/>
+                <circle cx="32" cy="32" r="4" fill="currentColor"/>
+                <line x1="32" y1="10" x2="32" y2="18" stroke="currentColor" stroke-width="2"/>
+                <line x1="32" y1="32" x2="42" y2="24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="32" y1="32" x2="36" y2="44" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <rect x="24" y="4" width="16" height="6" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="24" y="54" width="16" height="6" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="watch-card-badge" data-i18n="watches.card3Badge">Dress Watch</div>
+          </div>
+          <div class="watch-card-body">
+            <h3 class="watch-card-name">The Solstice</h3>
+            <p class="watch-card-detail" data-i18n="watches.card3Detail">Aço polido · Mostrador guilloché · Ultra-fino · Pulseira em couro de jacaré</p>
+            <p class="watch-card-desc" data-i18n="watches.card3Desc">Uma peça discreta e refinada para ocasiões formais — caixa ultra-fina, mostrador guilloché e pulseira artesanal em couro.</p>
+            <a href="#contact" class="watch-card-link" data-i18n="watches.cardLink">Solicitar Peça Semelhante</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="customization" id="customization">
+    <div class="container">
+      <p class="section-label text-center reveal" data-i18n="customization.label">Sob Medida</p>
+      <h2 class="section-title text-center reveal" data-i18n="customization.title">Cada Detalhe, Decidido por Você</h2>
+      <div class="tabs-wrapper reveal">
+        <div class="tabs-nav">
+          <button class="tab-btn active" data-tab="case" data-i18n="tabnav.case">Caixa</button>
+          <button class="tab-btn" data-tab="dial" data-i18n="tabnav.dial">Mostrador</button>
+          <button class="tab-btn" data-tab="strap" data-i18n="tabnav.strap">Pulseira</button>
+          <button class="tab-btn" data-tab="movement" data-i18n="tabnav.movement">Movimento</button>
+        </div>
+        <div class="tabs-content">
+          <div class="tab-panel active" id="tab-case">
+            <div class="tab-inner">
+              <div class="tab-icon">
+                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.7">
+                  <rect x="14" y="8" width="28" height="40" rx="8" stroke-width="1.5"/>
+                  <rect x="19" y="13" width="18" height="30" rx="5"/>
+                  <rect x="8" y="16" width="6" height="8" rx="2"/>
+                  <rect x="42" y="16" width="6" height="8" rx="2"/>
+                </svg>
+              </div>
+              <div class="tab-text">
+                <h3 data-i18n="tab.case.title">Material da Caixa</h3>
+                <p data-i18n="tab.case.desc">Seleciono caixas em aço inoxidável, titânio grau 5, PVD preto, bronze ou ouro 18k junto a fornecedores especializados, conforme sua preferência de estilo, peso e resistência. Cada caixa passa por inspeção, limpeza e polimento antes da montagem final.</p>
+                <ul class="tab-options">
+                  <li data-i18n="tab.case.opt1">Aço Inoxidável</li>
+                  <li data-i18n="tab.case.opt2">Titânio Grau 5</li>
+                  <li data-i18n="tab.case.opt3">PVD Preto</li>
+                  <li data-i18n="tab.case.opt4">Bronze</li>
+                  <li data-i18n="tab.case.opt5">Bicolor (Aço/Ouro)</li>
+                  <li data-i18n="tab.case.opt6">Ouro 18k</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tab-panel" id="tab-dial">
+            <div class="tab-inner">
+              <div class="tab-icon">
+                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.7">
+                  <circle cx="28" cy="28" r="22" stroke-width="1.5"/>
+                  <circle cx="28" cy="28" r="3" fill="currentColor"/>
+                  <line x1="28" y1="10" x2="28" y2="16" stroke-width="2"/>
+                  <line x1="28" y1="40" x2="28" y2="46" stroke-width="2"/>
+                  <line x1="10" y1="28" x2="16" y2="28" stroke-width="2"/>
+                  <line x1="40" y1="28" x2="46" y2="28" stroke-width="2"/>
+                  <line x1="28" y1="28" x2="38" y2="20" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="28" y1="28" x2="34" y2="34" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="tab-text">
+                <h3 data-i18n="tab.dial.title">Mostrador</h3>
+                <p data-i18n="tab.dial.desc">O mostrador é a alma do relógio. Seleciono entre acabamentos sunburst, guilloché, texturas fumé e foscas, ou madrepérola e índices aplicados — sempre com o mesmo critério de qualidade que aplico a cada fornecedor.</p>
+                <ul class="tab-options">
+                  <li data-i18n="tab.dial.opt1">Sunburst</li>
+                  <li data-i18n="tab.dial.opt2">Guilloché</li>
+                  <li data-i18n="tab.dial.opt3">Fumé</li>
+                  <li data-i18n="tab.dial.opt4">Fosco</li>
+                  <li data-i18n="tab.dial.opt5">Madrepérola</li>
+                  <li data-i18n="tab.dial.opt6">Índices Aplicados</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tab-panel" id="tab-strap">
+            <div class="tab-inner">
+              <div class="tab-icon">
+                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.7">
+                  <rect x="20" y="4" width="16" height="20" rx="4" stroke-width="1.5"/>
+                  <rect x="20" y="32" width="16" height="20" rx="4" stroke-width="1.5"/>
+                  <circle cx="28" cy="28" r="6" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div class="tab-text">
+                <h3 data-i18n="tab.strap.title">Pulseira &amp; Bracelete</h3>
+                <p data-i18n="tab.strap.desc">Trabalho com fornecedores especializados em couro (jacaré, avestruz, bezerro), borracha de alta performance e braceletes metálicas no mesmo material da caixa. Fivela deployant ou tradicional, no acabamento que você preferir.</p>
+                <ul class="tab-options">
+                  <li data-i18n="tab.strap.opt1">Jacaré</li>
+                  <li data-i18n="tab.strap.opt2">Avestruz</li>
+                  <li data-i18n="tab.strap.opt3">Couro de Bezerro</li>
+                  <li data-i18n="tab.strap.opt4">Borracha Esportiva</li>
+                  <li data-i18n="tab.strap.opt5">Bracelete Metálica</li>
+                  <li data-i18n="tab.strap.opt6">Milanesa</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tab-panel" id="tab-movement">
+            <div class="tab-inner">
+              <div class="tab-icon">
+                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.7">
+                  <circle cx="28" cy="28" r="20" stroke-width="1.5"/>
+                  <circle cx="28" cy="28" r="6"/>
+                  <circle cx="28" cy="12" r="3"/>
+                  <circle cx="44" cy="28" r="3"/>
+                  <circle cx="28" cy="44" r="3"/>
+                  <circle cx="12" cy="28" r="3"/>
+                  <line x1="28" y1="15" x2="28" y2="22" stroke-width="1"/>
+                  <line x1="41" y1="28" x2="34" y2="28" stroke-width="1"/>
+                </svg>
+              </div>
+              <div class="tab-text">
+                <h3 data-i18n="tab.movement.title">Movimento</h3>
+                <p data-i18n="tab.movement.desc">Seleciono movimentos automáticos e de quartzo de fabricantes reconhecidos, escolhidos por precisão, confiabilidade e reserva de marcha — sempre testados e calibrados por mim antes da entrega.</p>
+                <ul class="tab-options">
+                  <li data-i18n="tab.movement.opt1">Automático Três Ponteiros</li>
+                  <li data-i18n="tab.movement.opt2">Cronógrafo</li>
+                  <li data-i18n="tab.movement.opt3">GMT</li>
+                  <li data-i18n="tab.movement.opt4">Data</li>
+                  <li data-i18n="tab.movement.opt5">Reserva de Marcha 72h</li>
+                  <li data-i18n="tab.movement.opt6">Quartzo de Alta Precisão</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="custom-cta reveal">
+        <a href="#contact" class="btn btn-primary" data-i18n="customization.cta">Iniciar Sua Comissão</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <p class="section-label text-center reveal" data-i18n="testimonials.label">Depoimento de Cliente</p>
+      <h2 class="section-title text-center reveal" data-i18n="testimonials.title">O Que Dizem Meus Clientes</h2>
+      <p class="section-subtitle text-center reveal" data-i18n="testimonials.subtitle">Minha base de clientes está crescendo — em breve, mais histórias como esta.</p>
+      <div class="carousel-wrapper reveal">
+        <div class="carousel" id="carousel">
+          <div class="carousel-track" id="carouselTrack">
+            <div class="testimonial-slide">
+              <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+              <p class="testimonial-text" data-i18n="testimonial1.text">O trabalho foi impecável — um automático pensado exatamente para o meu dia a dia, com 72 horas de reserva de marcha. Recomendo de olhos fechados.</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">MC</div>
+                <div>
+                  <strong data-i18n="testimonial1.author">Sr. Costa</strong>
+                  <span data-i18n="testimonial1.location">Cliente Constellation Watches</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-controls" id="carouselControls">
+          <button class="carousel-btn" id="prevBtn" aria-label="Anterior" data-i18n-aria-label="testimonials.prev">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="carousel-dots" id="carouselDots"></div>
+          <button class="carousel-btn" id="nextBtn" aria-label="Próximo" data-i18n-aria-label="testimonials.next">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="section-label reveal" data-i18n="contact.label">Inicie a Conversa</p>
+          <h2 class="section-title reveal" data-i18n="contact.title">Comissione Seu Relógio</h2>
+          <p class="contact-body reveal" data-i18n="contact.body">Todo grande relógio começa com uma conversa. Conte um pouco sobre você, o estilo que procura e o uso que pretende dar à peça. Retorno em até 48 horas para conversarmos sobre os detalhes e possibilidades.</p>
+          <div class="contact-details reveal">
+            <div class="contact-detail-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:comercial.constellationwatches@gmail.com">comercial.constellationwatches@gmail.com</a>
+            </div>
+            <div class="contact-detail-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-i18n="contact.location">Recife, Brasil — atendimento remoto, mediante agendamento</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrapper reveal">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name" data-i18n="form.nameLabel">Nome Completo <span class="required">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Seu nome" data-i18n-placeholder="form.namePlaceholder" autocomplete="name" />
+                <span class="field-error" id="nameError"></span>
+              </div>
+              <div class="form-group">
+                <label for="email" data-i18n="form.emailLabel">E-mail <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" data-i18n-placeholder="form.emailPlaceholder" autocomplete="email" />
+                <span class="field-error" id="emailError"></span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone" data-i18n="form.phoneLabel">Telefone</label>
+                <input type="tel" id="phone" name="phone" placeholder="+55 (00) 00000-0000" autocomplete="tel" />
+                <span class="field-error" id="phoneError"></span>
+              </div>
+              <div class="form-group">
+                <label for="watchType" data-i18n="form.watchTypeLabel">Tipo de Relógio <span class="required">*</span></label>
+                <select id="watchType" name="watchType">
+                  <option value="" data-i18n="form.watchType.select">Selecione um tipo…</option>
+                  <option value="dress" data-i18n="form.watchType.dress">Clássico / Dress Watch</option>
+                  <option value="sport" data-i18n="form.watchType.sport">Esportivo / Piloto</option>
+                  <option value="chrono" data-i18n="form.watchType.chrono">Cronógrafo</option>
+                  <option value="skeleton" data-i18n="form.watchType.skeleton">Esqueleto</option>
+                  <option value="gmt" data-i18n="form.watchType.gmt">GMT</option>
+                  <option value="other" data-i18n="form.watchType.other">Outro / Não sei ainda</option>
+                </select>
+                <span class="field-error" id="watchTypeError"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message" data-i18n="form.messageLabel">Sua Visão <span class="required">*</span></label>
+              <textarea id="message" name="message" rows="5" placeholder="Conte a história por trás do relógio que você imagina, a ocasião, materiais, estilo e tudo o que te inspira…" data-i18n-placeholder="form.messagePlaceholder"></textarea>
+              <span class="field-error" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span data-i18n="form.submit">Enviar Minha Solicitação</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+            <div class="form-success" id="formSuccess">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <p data-i18n="form.success">Seu aplicativo de e-mail deve abrir com a mensagem pronta — revise e clique em enviar. Assim que eu receber, respondo em até 48 horas.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            <svg class="cw-mark" width="48" height="48" viewBox="40 40 100 120" role="img" aria-label="Constellation Watches">
+              <path d="M126,62 A46,46 0 1,0 126,138" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+              <path d="M78,84 L90,132 L102,96 L114,132 L126,84" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Constellation</span>
+          </a>
+          <p class="footer-tagline" data-i18n="footer.tagline">Tempo, sob medida para você.<br/>Recife, desde 2025.</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/in/filipe-moreno/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading" data-i18n="footer.navHeading">Navegar</h4>
+          <ul class="footer-links">
+            <li><a href="#about" data-i18n="footer.navAbout">Sobre</a></li>
+            <li><a href="#how-it-works" data-i18n="footer.navProcess">Processo</a></li>
+            <li><a href="#watches" data-i18n="footer.navCollection">Coleção</a></li>
+            <li><a href="acervo.html" data-i18n="footer.navAcervo">Acervo</a></li>
+            <li><a href="complementos.html" data-i18n="footer.navComplementos">Complementos</a></li>
+            <li><a href="#customization" data-i18n="footer.navCustomize">Personalização</a></li>
+            <li><a href="#testimonials" data-i18n="footer.navTestimonials">Depoimentos</a></li>
+            <li><a href="#contact" data-i18n="footer.navContact">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading" data-i18n="footer.contactHeading">Contato</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:comercial.constellationwatches@gmail.com">comercial.constellationwatches@gmail.com</a></li>
+            <li><span data-i18n="footer.contactLocation">Recife, Brasil</span></li>
+          </ul>
+          <div class="footer-hours">
+            <p data-i18n="footer.hours">Atendimento remoto, mediante agendamento.</p>
+            <p data-i18n="footer.responseTime">Resposta em até 48 horas.</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">&copy; 2026 Constellation Watches. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
