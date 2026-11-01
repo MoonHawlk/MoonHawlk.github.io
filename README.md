@@ -109,7 +109,7 @@ The post itself, in Markdown: headings (##), paragraphs, **bold**, *italics*,
 ```
 
 - Remove `draft: true` (or set it to `false`) to publish the post, then run the build.
-- The Writing section and its menu link only appear on the home page when at least one post is published.
+- The Writing section is always on the home page. Until a post is published it shows a short "first posts are on the way" line.
 - The three posts already in the folder are drafts with a title and summary, waiting to be written.
 
 ---

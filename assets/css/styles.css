@@ -248,10 +248,6 @@ section:nth-of-type(even) {
     background-color: var(--bg-alt);
 }
 
-#posts[hidden] + #contact {
-    background-color: var(--bg);
-}
-
 .section-inner {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -509,6 +505,11 @@ section:nth-of-type(even) {
     font-size: 0.9rem;
     color: var(--text-muted);
     line-height: 1.65;
+}
+
+.posts-empty {
+    color: var(--text-muted);
+    font-size: 0.95rem;
 }
 
 /* ============================================================

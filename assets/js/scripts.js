@@ -29,7 +29,7 @@ function applySiteInfo() {
         .catch(() => {});
 }
 
-// Lists published posts from writing/posts.json; the Writing section stays hidden when there are none
+// Lists published posts from writing/posts.json; the placeholder line stays when there are none
 function loadPosts() {
     const list = document.getElementById('posts-list');
     if (!list) return;
@@ -39,7 +39,6 @@ function loadPosts() {
         .then(posts => {
             if (!posts.length) return;
             list.innerHTML = posts.map(buildPostCard).join('');
-            document.querySelectorAll('[data-posts-section]').forEach(el => { el.hidden = false; });
         })
         .catch(() => {});
 }
